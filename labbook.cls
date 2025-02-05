@@ -23,6 +23,8 @@
 \chardef\labbook@us=\catcode`_
 \catcode`_=3 % funny catcode
 
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} 
+
 \def\newexperiment#1{%
   \@ifnextchar [{\opt@arg@newexperiment{#1}}%
     {\nopt@arg@newexperiment{#1}}%]

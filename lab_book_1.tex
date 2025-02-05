@@ -45,6 +45,10 @@
 
 \documentclass[idxtotoc,hyperref,openany]{labbook} % 'openany' here removes the gap page between days, erase it to restore this gap; 'oneside' can also be added to remove the shift that odd pages have to the right for easier reading
 
+\usepackage{tikz}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{colortbl}
+
 \usepackage[ 
   backref=page,
   pdfpagelabels=true,
@@ -247,6 +251,7 @@ The purpose of this lab is to introduce the use of the \textbf{Phyphox} app for 
     \item Included a \textbf{simple annotation} (e.g., a smiley face) to demonstrate knowledge of the function.
     \item View figure \ref{fig:Lab02-Annotated} for proof.
 \end{enumerate}
+\newpage
 \textbf{Exploring Different Data Views}
 \begin{enumerate}[$\bullet$]
     \item \textbf{Enlarged x-, y-, and z-axis plots} to analyze differences. (View figures \ref{fig:Lab02-PhoneDropX}, \ref{fig:Lab02-PhoneDropY}, \ref{fig:Lab02-PhoneDropZ} for proof)
@@ -289,6 +294,37 @@ The purpose of this lab is to introduce the use of the \textbf{Phyphox} app for 
 \end{enumerate}
 
 %----------------------------------------------------------------------------------------
+
+\experiment{Data Analysis}
+In each gyroscope recording, I could tell whether it was the x, y, or z axis because one of the graphs (x, y, or z) would stand out the most, for example, on all the data on the left-hand side. One of the graphs would stand out the most, meaning it would have more recorded data sets than all the others. That was how I figured out what axis my phone was recording based on the datasets provided.
+
+%----------------------------------------------------------------------------------------
+
+\experiment{Data Interpretation}
+\begin{enumerate}[$\bullet$]
+    \item \textbf{1D Motion was verified} since acceleration was mainly recorded along one axis at a time.
+    \item \textbf{Data processing skills improved} by using pan, zoom, and pick data point tools.
+    \item \textbf{Exporting data and recording metadata ensured reproducibility.}
+    \item \textbf{Gyroscope results confirmed correct phone axis identification.}
+\end{enumerate}
+
+%----------------------------------------------------------------------------------------
+
+\experiment{Achievement of Learning Objectives}
+\begin{enumerate}[$\bullet$]
+    \item \checkmark \hspace{1mm} Successfully \textbf{collected and analyzed} data using Phyphox.
+    \item \checkmark \hspace{1mm} Used different views (main screen, zoom, pan, pick data).
+    \item \checkmark \hspace{1mm} Determined \textbf{phone’s x-, y-, and z-axes} using Gyroscope sensor.
+    \item \checkmark \hspace{1mm} Exported data properly and recorded necessary details.
+\end{enumerate}
+
+%----------------------------------------------------------------------------------------
+
+\experiment{Conclusion}
+This lab introduced \textbf{Phyphox as a data collection tool}, providing hands-on experience with \textbf{acceleration and gyroscope sensors}. The data collected successfully demonstrated \textbf{1D motion}, and I gained experience with \textbf{zooming, panning, and annotating data}. Moving forward, I will focus on \textbf{improving data visualization and exploring multi-dimensional motion} in later labs.
+
+%----------------------------------------------------------------------------------------
+
 \newpage
 \experiment{Data Pictures}
 \textbf{Collecting Acceleration Data (Without g)}
@@ -390,7 +426,7 @@ The purpose of this lab is to introduce the use of the \textbf{Phyphox} app for 
 
 \begin{figure}[H] % Example of including images
 \begin{center}
-\includegraphics[width=.7\linewidth]{images/Lab.02/GyyroscopeY.PNG}
+\includegraphics[width=.7\linewidth]{images/Lab.02/GyroscopeY.PNG}
 \end{center}
 \caption{Screenshot of getting the Gyroscope data for the y-axis for the phone.}
 \label{fig:Lab02-GyroscopeY}
@@ -398,15 +434,13 @@ The purpose of this lab is to introduce the use of the \textbf{Phyphox} app for 
 
 \begin{figure}[H] % Example of including images
 \begin{center}
-\includegraphics[width=.7\linewidth]{images/Lab.02/GyyroscopeZ.PNG}
+\includegraphics[width=.7\linewidth]{images/Lab.02/GyroscopeZ.PNG}
 \end{center}
 \caption{Screenshot of getting the Gyroscope data for the z-axis for the phone.}
 \label{fig:Lab02-GyroscopeZ}
 \end{figure}
 
 %----------------------------------------------------------------------------------------
-
-\experiment{Data }
 
 
 % \begin{tabular}{l l l l l l l l l l l l l}
