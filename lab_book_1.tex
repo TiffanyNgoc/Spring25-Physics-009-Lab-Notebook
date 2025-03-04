@@ -501,13 +501,306 @@ The purpose of this lab is to utilize the \textbf{Phyphox} app for \textbf{data 
     \item \textbf{Create and analyze plots} to examine motion trends and compare expected vs. actual results.
 \end{enumerate}
 
-\textbf{Notes}
 \hfill \break
-Formula for numerical integration distance:
+\experiment{Carrying Out the Experiment}
+\textbf{Plan 1: Simple Motion}
+\begin{enumerate}[$\bullet$]
+    \item \textbf{Motion Type:} Move phone in a straight line. (I moved the phone in a single direction; constant speed to the right).
+    \item \textbf{Data Collected:} Acceleration data in the x-axis.
+    \item \textbf{Observations:} Data is mostly smooth; small fluctuations due to hand stability.
+    \item \textbf{Screenshots of Data:} Refer to figures: \ref{fig:Lab03-Motion1}, \ref{fig:Lab03-Motion1-X}, \ref{fig:Lab03-Motion1-Excel}.
+    \item \textbf{File Location:} Physics 9L $>$ Lab03\textunderscore Data
+\end{enumerate}
+\textbf{Plan 2: More Complex Motion}
+\begin{enumerate}[$\bullet$]
+    \item \textbf{Motion Type:} Move phone in a more erratic motion with direction changes. (I moved the phone in a swift circle and changing directions).
+    \item \textbf{Data Collected:} Acceleration data in both x- and y-axes.
+    \item \textbf{Observations:} Acceleration shows more variability; motion isn't purely in one direction.
+    \item \textbf{Screenshots of Data:} Refer to figures: \ref{fig:Lab03-Motion2}, \ref{fig:Lab03-Motion2-X}, \ref{fig:Lab03-Motion2-Y}, \ref{fig:Lab03-Motion2-Excel-X}, \ref{fig:Lab03-Motion2-Excel-Y}
+    \item \textbf{File Location:} Physics 9L $>$ Lab03\textunderscore Data
+\end{enumerate}
+\textbf{Plan 3: Motion with $\Delta$r = 0}
+\begin{enumerate}[$\bullet$]
+    \item \textbf{Motion Type:} Shake phone back and forth, returning to the initial position.
+    \item \textbf{Data Collected:} Acceleration data in multiple axes.
+    \item \textbf{Observations:} Acceleration oscillates between positive and negative values; final velocity and position should return to zero.
+    \item \textbf{Screenshots of Data:} Refer to figures: \ref{fig:Lab03-Motion3}, \ref{fig:Lab03-Motion3-X}, \ref{fig:Lab03-Motion3-Y}, \ref{fig:Lab03-Motion3-Z}, \ref{fig:Lab03-Motion3-X-Excel}, \ref{fig:Lab03-Motion3-Y-Excel}, \ref{fig:Lab03-Motion3-Z-Excel}.
+    \item \textbf{File Location:} Physics 9L $>$ Lab03\textunderscore Data
+\end{enumerate}
+
+%---------------------------------------------------------------------------------------- 
+
+\experiment{Complete Data Analysis}
+\textbf{Data Processing:}
+\begin{enumerate}[$\bullet$]
+    \item Exported raw acceleration data.
+    \item Applied \textbf{trapezoidal integration} to calculate velocity and position.
+    \item Plotted \textbf{acceleration vs. time, velocity vs. time, and position vs. time.}
+\end{enumerate}
+\textbf{Key Calculations:}
+\begin{enumerate}[$\bullet$]
+     \item Velocity calculated as:
+    \[
+    v_{n+1} = \frac{1}{2} \left( a_n + a_{n+1} \right) \left( t_{n+1} - t_n \right) + v_n
+    \]
+    \item Position calculated as:
+    \[
+    x_{n+1} = \frac{1}{2} \left( v_n + v_{n+1} \right) \left( t_{n+1} - t_n \right) + x_n
+    \]
+\end{enumerate}
+\textbf{Graphical Analysis:}
+\begin{enumerate}[$\bullet$]
+    \item \textbf{Acceleration vs. Time:} Peaks corresponding to direction changes. Data provided in Phyphox screenshots.
+    \item \textbf{Velocity vs. Time:} Shows smooth integration of acceleration. Confirmed through Excel visualization.
+    \item \textbf{Position vs. Time:} Confirms motion patterns and boundary conditions. Screenshots included.
+\end{enumerate}
+\textbf{Relationship Between Position, Velocity, and Acceleration:}
+\begin{enumerate}[$\bullet$]
+    \item \textbf{Acceleration} represents the rate of change of velocity. Peaks in acceleration indicate changes in velocity, while periods of zero acceleration correspond to constant velocity.
+    \item \textbf{Velocity} is the integral of acceleration. A positive acceleration increases velocity, while a negative acceleration decreases it. The velocity graph is smoother than acceleration as it accumulates changes over time.
+    \item \textbf{Position} is the integral of velocity. When velocity is positive, position increases, and when velocity is negative, position decreases. The position graph reflects the cumulative effect of acceleration changes over time.
+\end{enumerate}
+
+%---------------------------------------------------------------------------------------- 
+
+\experiment{Achievement of Learning Objectives}
+\begin{enumerate}[$\bullet$]
+    \item Successfully applied \textbf{Phyphox} to record and analyze acceleration data.
+    \item Used \textbf{trapezoidal integration} to calculate velocity and position.
+    \item Created \textbf{informative plots} to visualize motion.
+    \item Confirmed the relationship between \textbf{acceleration, velocity, and position.}
+    \item Verified \textbf{1D and multi-dimensional motion} distinctions.
+\end{enumerate}
+
+%---------------------------------------------------------------------------------------- 
+
+\experiment{Reflection on Lab \& Learning Process}
+\textbf{Mistakes \& Improvements:}
+\begin{enumerate}[$\bullet$]
+    \item \textbf{Common Issues:}
+    \begin{enumerate}[$\bullet$]
+        \item Initial dataset contained noise; resolved by taking multiple trials.
+        \item Some acceleration peaks were unexpected due to unintended hand movements.
+    \end{enumerate}
+    \item \textbf{Fixes:}
+    \begin{enumerate}[$\bullet$]
+        \item Used \textbf{smoother motion} for controlled experiments.
+        \item Applied \textbf{data smoothing techniques}in post-analysis.
+    \end{enumerate}
+\end{enumerate}
+\textbf{What I Would Do Differently:}
+\begin{enumerate}[$\bullet$]
+    \item Use a \textbf{mounting device} for the phone to reduce unwanted movement if possible.
+    \item Experiment with \textbf{different sampling rates} to improve accuracy.
+    \item Compare \textbf{manual calculations} with Phyphox’s built-in numerical integration.
+\end{enumerate}
+
+%---------------------------------------------------------------------------------------- 
+
+\experiment{Final Notes:}
+This lab reinforced numerical integration concepts using \textbf{real-world motion data}. Using Phyphox, I could visualize and analyze acceleration, velocity, and position in a \textbf{practical and intuitive manner}. Future improvements include \textbf{refining data collection methods} and exploring additional integration techniques.
+
+%---------------------------------------------------------------------------------------- 
+
+\newpage
+\experiment{Data Pictures}
+\begin{figure}[H] % Example of including images
+\begin{center}
+\includegraphics[width=.55\linewidth]{images/Lab.03/Lab03Motion1.PNG}
+\end{center}
+\caption{Full screenshot of motion 1 data}
+\label{fig:Lab03-Motion1}
+\end{figure}
+
+\begin{figure}[H] % Example of including images
+\begin{center}
+\includegraphics[width=.55\linewidth]{images/Lab.03/Lab03Motion1X.PNG}
+\end{center}
+\caption{Full screenshot of motion 1 data for X}
+\label{fig:Lab03-Motion1-X}
+\end{figure}
+
+\begin{figure}[H] % Example of including images
+\begin{center}
+\includegraphics[width=1.3\linewidth]{images/Lab.03/Lab03Motion1Excel.png}
+\end{center}
+\caption{Full screenshot of motion 1 in Excel}
+\label{fig:Lab03-Motion1-Excel}
+\end{figure}
+
+\begin{figure}[H] % Example of including images
+\begin{center}
+\includegraphics[width=.55\linewidth]{images/Lab.03/Lab03Motion2.PNG}
+\end{center}
+\caption{Full screenshot of motion 2 data}
+\label{fig:Lab03-Motion2}
+\end{figure}
+
+\begin{figure}[H] % Example of including images
+\begin{center}
+\includegraphics[width=.55\linewidth]{images/Lab.03/Lab03Motion2X.PNG}
+\end{center}
+\caption{Full screenshot of motion 2 data for X}
+\label{fig:Lab03-Motion2-X}
+\end{figure}
+
+\begin{figure}[H] % Example of including images
+\begin{center}
+\includegraphics[width=.55\linewidth]{images/Lab.03/Lab03Motion2Y.PNG}
+\end{center}
+\caption{Full screenshot of motion 2 data for Y}
+\label{fig:Lab03-Motion2-Y}
+\end{figure}
+
+\begin{figure}[H] % Example of including images
+\begin{center}
+\includegraphics[width=1.3\linewidth]{images/Lab.03/Lab03MotionXExcel.png}
+\end{center}
+\caption{Full screenshot of motion 2 data in Excel for X}
+\label{fig:Lab03-Motion2-Excel-X}
+\end{figure}
+
+\begin{figure}[H] % Example of including images
+\begin{center}
+\includegraphics[width=1.2\linewidth]{images/Lab.03/Lab03MotionYExcel.png}
+\end{center}
+\caption{Full screenshot of motion 2 data in Excel for Y}
+\label{fig:Lab03-Motion2-Excel-Y}
+\end{figure}
+
+\begin{figure}[H] % Example of including images
+\begin{center}
+\includegraphics[width=.55\linewidth]{images/Lab.03/Lab03Motion3.PNG}
+\end{center}
+\caption{Full screenshot of motion 3 data}
+\label{fig:Lab03-Motion3}
+\end{figure}
+
+\begin{figure}[H] % Example of including images
+\begin{center}
+\includegraphics[width=.55\linewidth]{images/Lab.03/Lab03Motion3X.PNG}
+\end{center}
+\caption{Full screenshot of motion 3 data for X}
+\label{fig:Lab03-Motion3-X}
+\end{figure}
+
+\begin{figure}[H] % Example of including images
+\begin{center}
+\includegraphics[width=.55\linewidth]{images/Lab.03/Lab03Motion3Y.PNG}
+\end{center}
+\caption{Full screenshot of motion 3 data for Y}
+\label{fig:Lab03-Motion3-Y}
+\end{figure}
+
+\begin{figure}[H] % Example of including images
+\begin{center}
+\includegraphics[width=.55\linewidth]{images/Lab.03/Lab03Motion3Z.PNG}
+\end{center}
+\caption{Full screenshot of motion 3 data for Z}
+\label{fig:Lab03-Motion3-Z}
+\end{figure}
+
+\begin{figure}[H] % Example of including images
+\begin{center}
+\includegraphics[width=1.3\linewidth]{images/Lab.03/Lab03Motion3XExcel.png}
+\end{center}
+\caption{Full screenshot of motion 3 data for X in Excel}
+\label{fig:Lab03-Motion3-X-Excel}
+\end{figure}
+
+\begin{figure}[H] % Example of including images
+\begin{center}
+\includegraphics[width=1.2\linewidth]{images/Lab.03/Lab03Motion3YExcel.png}
+\end{center}
+\caption{Full screenshot of motion 3 data for Y in Excel}
+\label{fig:Lab03-Motion3-Y-Excel}
+\end{figure}
+
+\begin{figure}[H] % Example of including images
+\begin{center}
+\includegraphics[width=1.2\linewidth]{images/Lab.03/Lab03Motion3ZExcel.png}
+\end{center}
+\caption{Full screenshot of motion 3 data for Z in Excel}
+\label{fig:Lab03-Motion3-Z-Excel}
+\end{figure}
+
+%---------------------------------------------------------------------------------------- 
+
+\vspace{-5mm}
+\labday{Monday, 03 March 2025}
+\vspace{-5mm}
+Tiffany Pham
+
+\experiment{Lab 04 (Lab) - Phyphox III - Numerical Integration Using Spreadsheets}
+\textbf{Purpose}
+
+This lab aims to extend our understanding of motion by exploring \textbf{numerical derivatives} using real-world acceleration data. While previous labs focused on velocity and displacement, this lab emphasizes the \textbf{higher-order derivatives of acceleration}, namely \textbf{jerk} and \textbf{snap}. These quantities are relevant in real-world applications, from engineering to biomechanics, where rapid changes in motion influence physical experiences and mechanical stress.
+
 \hfill \break
-$D3=\frac{1}{2}*(C3+C2)*(A3-A2)+D2$
+\textbf{Objective(s)}
+\begin{enumerate}[$\bullet$]
+    \item Numerically calculate the first derivative (jerk) from discrete data points.
+    \item Numerically calculate the second derivative (snap) from discrete data points.
+    \item Develop an experimental plan, make predictions, execute the plan, and analyze the data.
+    \item Conceptually and mathematically analyze the relationships for acceleration, jerk, and snap.
+\end{enumerate}
+
+\hfill \break
+\textbf{Predictions}
+\begin{enumerate}[$\bullet$]
+    \item \textbf{Jerk} will be significant in activities with abrupt acceleration changes (e.g., sudden stops, rapid movements).
+    \item \textbf{Snap} will be noticeable when there are rapid changes in jerk, such as impacts or shifts in force application.
+    \item For \textbf{smooth, continuous motions}, jerk and snap should be small or negligible.
+    \item Noise in the data will be present, even when holding the phone steady, due to sensor limitations.
+\end{enumerate}
+
+\hfill \break
+\textbf{Experimental Plan/Procedure}
+
+\hfill \break
+\textbf{Equipment needed}
+\begin{enumerate}[$\bullet$]
+    \item \textbf{Smartphone} with Phyphox installed.
+    \item \textbf{Phyphox App Features:}
+    \begin{enumerate}[$\bullet$]
+        \item \textbf{Acceleration (without g) sensor}
+    \end{enumerate}
+    \item \textbf{Computer} for exporting and analyzing data.
+    \item \textbf{Excel spreadsheet} for numerical differentiation.
+\end{enumerate}
+
+\hfill \break
+\textbf{Procedure:}
+\begin{enumerate}
+    \item \textbf{Practice Numerical Derivatives}
+    \begin{enumerate}[$\bullet$]
+        \item Use the provided Excel spreadsheet to calculate numerical derivatives using the \textbf{center difference method}.
+        \item Compute the first derivative (jerk) and the second derivative (snap).
+        \item Compare manual calculations with the spreadsheet formulas.
+    \end{enumerate}
+    \item \textbf{Data Collection Using Phyphox}
+    \begin{enumerate}[$\bullet$]
+        \item Select a physical activity that involves varying acceleration (e.g., jumping, running, biking, driving, sudden stops).
+        \item Use "\textbf{Acceleration (without g)}" in Phyphox to record data.
+        \item Perform multiple trials to capture meaningful acceleration variations.
+        \item Annotate the \textbf{acceleration vs. time} plot, indicating expected points of large jerk or snap.
+        \item Export the data and note the filename and location.
+    \end{enumerate}
+    \item \textbf{Data Processing \& Analysis}
+    \begin{enumerate}[$\bullet$]
+        \item Compute \textbf{jerk} (first derivative of acceleration) and \textbf{snap} (second derivative of acceleration) using numerical differentiation.
+        \item Create \textbf{plots for acceleration, jerk, and snap} for each axis.
+        \item Compare annotated predictions with actual recorded data.
+    \end{enumerate}
+\end{enumerate}
+
+%---------------------------------------------------------------------------------------- 
+
+\experiment{Carrying Out the Experiment}
 
 
+
+%---------------------------------------------------------------------------------------- 
 % \begin{tabular}{l l l l l l l l l l l l l}
 % \toprule
 % \textbf{Name} & \textbf{Track 1} & \textbf{Track 2} & \textbf{Track 3} & \textbf{Track 4} & \textbf{Track 5} & \textbf{Track 6} & \textbf{Track 7} & \textbf{Track 8} & \textbf{Track 9} & \textbf{Track 10} & \textbf{Track 11} & \textbf{Track 12}    \\
