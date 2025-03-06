@@ -752,6 +752,8 @@ This lab aims to extend our understanding of motion by exploring \textbf{numeric
     \item \textbf{Snap} will be noticeable when there are rapid changes in jerk, such as impacts or shifts in force application.
     \item For \textbf{smooth, continuous motions}, jerk and snap should be small or negligible.
     \item Noise in the data will be present, even when holding the phone steady, due to sensor limitations.
+    \item The \textbf{higher the drop}, the \textbf{greater the jerk and snap values} due to increased velocity before impact.
+    \item The \textbf{pillow will reduce snap intensity} compared to a harder surface since it cushions the impact.
 \end{enumerate}
 
 \hfill \break
@@ -767,6 +769,7 @@ This lab aims to extend our understanding of motion by exploring \textbf{numeric
     \end{enumerate}
     \item \textbf{Computer} for exporting and analyzing data.
     \item \textbf{Excel spreadsheet} for numerical differentiation.
+    \item \textbf{Soft pillow} to safely cushion the phone.
 \end{enumerate}
 
 \hfill \break
@@ -792,15 +795,254 @@ This lab aims to extend our understanding of motion by exploring \textbf{numeric
         \item Create \textbf{plots for acceleration, jerk, and snap} for each axis.
         \item Compare annotated predictions with actual recorded data.
     \end{enumerate}
+    \item \textbf{Actual Pillow Procedure}
+    \begin{enumerate}[$\bullet$]
+        \item \textbf{Start Recording Data} in Phyphox.
+        \item \textbf{Hold the phone steady for a few seconds} to establish a baseline.
+        \item \textbf{Drop the phone onto the pillow} (keep it flat to avoid spinning).
+        \item \textbf{Let it rest for a few seconds} after impact.
+        \item \textbf{Repeat for different heights} to compare variations.
+        \item \textbf{Export the data} and note the file names for reference.
+    \end{enumerate}
+    \item \textbf{Variations:}
+    \begin{enumerate}[$\bullet$]
+        \item \textbf{Different Pillow Types:} Try dropping the phone onto a soft vs. firm pillow to compare jerk and snap values.
+        \item \textbf{Drop Angles:} Hold the phone in \textbf{different orientations} (flat, tilted, vertical) to see if orientation affects acceleration patterns.
+        \item \textbf{Hand vs. No Hand Impact:} Drop the phone normally, then try \textbf{gently stopping it with your hand} before it fully lands to see how the impact changes.
+    \end{enumerate}
+\end{enumerate}
+
+%---------------------------------------------------------------------------------------- 
+
+\experiment{Practice Numerical Derivatives}
+\begin{enumerate}
+    \item Using the provided excel document I calculated the first and second derivatives using the Excel code. For the first derivative, I did: 
+    \[=(B5 - B3) / (A5 - A3)
+    \]
+    and for the second derivative, I did: 
+    \[=(B5 - 2*B4 + B3) / (A5 - A4)^2
+    \]
+    \item \textbf{Observations from Numerical Calculations:}
+    \begin{enumerate}[$\bullet$]
+        \item The numerical \textbf{first derivative} closely matches the expected $cos(\theta)$ values.
+        \item The numerical \textbf{second derivative} closely follows $-sin(\theta)$, with small deviations due to numerical approximation errors.
+        \item \textbf{Accuracy improves} with smaller step sizes $(\Delta\theta)$, as errors are minimized.
+        \item Small deviations may arise due to floating-point precision limits in Excel computations.
+    \end{enumerate}
+    \item Screenshots provided, please refer to figure(s): \ref{fig:Lab04-NumericalPractice}
 \end{enumerate}
 
 %---------------------------------------------------------------------------------------- 
 
 \experiment{Carrying Out the Experiment}
-
-
+\textbf{Selected Activity: Dropping the Phone on a Pillow}
+\begin{enumerate}[$\bullet$]
+    \item \textbf{Motion Type:} Free fall followed by a cushioned impact.
+    \item \textbf{Data Collected:} Acceleration data recorded using Phyphox.
+    \item \textbf{Observations:}
+    \begin{enumerate}[$\bullet$]
+        \item \textbf{Initial Free Fall:} The phone accelerates due to gravity.
+        \item \textbf{Impact with Pillow:} Sudden deceleration occurs, creating high jerk and snap values.
+        \item \textbf{Final Rest Position:} Acceleration returns to zero after coming to a stop.
+    \end{enumerate}
+    \item \textbf{Screenshots of Data:}
+    \begin{enumerate}[$\bullet$]
+        \item Acceleration plots for \textbf{x-, y-, and z-axes} show distinct peaks at the moment of impact.
+        \item The \textbf{z-axis} shows the highest acceleration spike due to the direct impact.
+        \item Noise is minimal after the phone comes to rest.
+        \item Please refer to figures: \ref{fig:Lab04-AnnotatedXGraph}, \ref{fig:Lab04-AnnotatedYGraph}, \ref{fig:Lab04-AnnotatedZGraph}
+    \end{enumerate}
+\end{enumerate}
 
 %---------------------------------------------------------------------------------------- 
+
+\experiment{Graph Descriptions}
+\begin{enumerate}
+    \item \textbf{Z-Axis Acceleration Graph (Primary Impact Direction)}
+    \begin{enumerate}[$\bullet$]
+        \item The \textbf{Z-axis acceleration graph} shows the most significant changes in motion since the phone primarily moves in the vertical direction.
+        \item Initially, the acceleration remains near \textbf{zero} as the phone is held steady.
+        \item Once released, acceleration \textbf{decreases slightly}, representing the start of free fall.
+        \item At the moment of \textbf{impact with the pillow}, a \textbf{sharp positive acceleration spike} is observed. This occurs because the pillow exerts an upward force on the phone, quickly decelerating it.
+        \item After impact, \textbf{small oscillations} may be present as the phone settles into its final resting position.
+    \end{enumerate}
+    \textbf{Key Points in the Z-Axis Graph:}
+    \begin{enumerate}[$\bullet$]
+        \item \textbf{Start of Free Fall:} Acceleration slightly drops or stays near zero.
+        \item \textbf{Impact with Pillow:} The graph exhibits a \textbf{sharp, large spike} (high acceleration peak).
+        \item \textbf{Resting Phase:} After impact, the graph stabilizes as the phone comes to rest.
+    \end{enumerate}
+    \item \textbf{X-Axis Acceleration Graph (Sideways Motion)}
+    \begin{enumerate}[$\bullet$]
+        \item The \textbf{X-axis acceleration graph} captures any \textbf{horizontal motion} or tilting during the drop.
+        \item If the phone remained \textbf{perfectly vertical}, this graph should show \textbf{minimal acceleration}.
+        \item However, if the phone \textbf{tilted slightly} or had a small sideways motion, small fluctuations will appear before and after 
+        impact.
+        \item The impact itself may cause a \textbf{small acceleration peak} due to forces acting in multiple directions.
+    \end{enumerate}
+    \textbf{Key Points in the X-Axis Graph:}
+    \begin{enumerate}[$\bullet$]
+        \item \textbf{Small deviations} before impact suggest \textbf{tilt or slight horizontal motion}.
+        \item \textbf{Minor peak at impact} due to sideways force from landing.
+    \end{enumerate}
+    \item \textbf{Y-Axis Acceleration Graph (Lateral Motion)}
+    \begin{enumerate}[$\bullet$]
+        \item The \textbf{Y-axis acceleration graph} behaves similarly to the \textbf{X-axis graph}, showing any sideways movement.
+        \item If the phone \textbf{rotated slightly} during free fall, small fluctuations may appear.
+        \item A \textbf{small peak at impact} indicates that forces were applied in the Y-direction as well.
+    \end{enumerate}
+    \textbf{Key Points in the Y-Axis Graph:}
+    \begin{enumerate}[$\bullet$]
+        \item \textbf{Small oscillations} indicate any tilting before impact.
+        \item \textbf{Small acceleration peak at impact} reflects a force in the lateral direction.
+    \end{enumerate}
+    \item \textbf{General Observations Across All Graphs}
+    \begin{enumerate}[$\bullet$]
+        \item The \textbf{largest acceleration spike appears in the Z-axis}, confirming that the primary force upon impact was \textbf{vertical}.
+        \item Small fluctuations in the X and Y axes suggest \textbf{minor horizontal motion or tilting}.
+        \item After impact, all acceleration values return to a steady state as the phone \textbf{comes to rest}.
+    \end{enumerate}
+\end{enumerate}
+
+%---------------------------------------------------------------------------------------- 
+
+\experiment{Complete Data Analysis}
+\textbf{Data Processing:}
+\begin{enumerate}[$\bullet$]
+    \item Exported raw acceleration data
+    \item Applied \textbf{numerical differentiation (center difference method)} to compute jerk and snap.
+    \item Plotted \textbf{acceleration vs. time, jerk vs. time, and snap vs. time.}
+\end{enumerate}
+\textbf{Key Calculations:}
+\begin{itemize}
+    \item \textbf{Jerk Calculation:}
+    \[
+    j_n = \frac{a(t+\Delta t) - a(t-\Delta t)}{2\Delta t}
+    \]
+    
+    \item \textbf{Snap Calculation:}
+    \[
+    s_n = \frac{a(t+\Delta t) - 2a(t) + a(t-\Delta t)}{(\Delta t)^2}
+    \]
+\end{itemize}
+\textbf{Graphical Analysis:}
+\begin{enumerate}[$\bullet$]
+    \item \textbf{Acceleration vs. Time:} Peaks indicate changes in motion and force application.
+    \begin{enumerate}[$\bullet$]
+        \item The \textbf{z-axis shows a sharp spike}, corresponding to impact.
+    \end{enumerate}
+    \item \textbf{Jerk vs. Time:} High values correspond to sudden changes in acceleration.
+    \item \textbf{Snap vs. Time:} Large Values indicate rapid changes in jerk.
+\end{enumerate}
+
+%---------------------------------------------------------------------------------------- 
+
+\textbf{Data Interpretation}
+\textbf{Relationships Between Acceleration, Jerk, and Snap:}
+\begin{enumerate}[$\bullet$]
+    \item \textbf{Acceleration} represents the rate of change of velocity.
+    \item \textbf{Jerk} represents the rate of change of acceleration. Sudden changes in acceleration (such as impacts) produce high jerk values.
+    \item \textbf{Snap} represents the rate of change of jerk. A rapid transition in acceleration, such as hitting a surface, results in large snap values.
+\end{enumerate}
+\textbf{Comparison of Predictions vs. Data:}
+\begin{enumerate}[$\bullet$]
+    \item \textbf{Where did we observe large jerk values?} At the moment of impact.
+    \item \textbf{Where did snap reach high values?} Right after the phone made contact with the pillow, as acceleration changed rapidly.
+    \item \textbf{Were any unexpected trends observed?} Nope.
+    \item \textbf{Did noise affect data accuracy?} Minimal noise was observed after impact.
+\end{enumerate}
+\textbf{More Interpretations of Data Graphs}
+\begin{enumerate}[$\bullet$]
+    \item The \textbf{impact peak in the Z-axis} is expected, as the force from the pillow \textbf{opposes the downward motion}.
+    \item The \textbf{X and Y axes show minimal impact}, meaning the motion was mostly vertical.
+    \item If tilting was observed, slight differences between the \textbf{X and Y acceleration peaks} can be analyzed.
+    \item The \textbf{pillow absorbed some force}, which resulted in a less extreme acceleration peak than if the phone had hit a harder surface.
+\end{enumerate}
+
+%---------------------------------------------------------------------------------------- 
+
+\experiment{Achievement of Learning Objectives}
+\begin{enumerate}[$\bullet$]
+    \item Successfully applied \textbf{numerical differentiation} to compute jerk and snap.
+    \item Used \textbf{Phyphox} to collect real-world acceleration data.
+    \item Created \textbf{visual representations} of acceleration, jerk, and snap.
+    \item Compared \textbf{predictions} with actual motion data and analyzed discrepancies.
+\end{enumerate}
+
+%---------------------------------------------------------------------------------------- 
+
+\experiment{Reflection on Lab \& Learning Process}
+\textbf{Mistakes \& Improvements:}
+\begin{enumerate}[$\bullet$]
+    \item \textbf{Common Issues:}
+    \begin{enumerate}[$\bullet$]
+        \item Sensor noise introduced small errors in numerical derivatives.
+        \item Jerk and snap calculations were sensitive to data resolution.
+    \end{enumerate}
+    \item \textbf{Fixes:}
+    \begin{enumerate}[$\bullet$]
+        \item Smoothed data using moving averages to reduce noise.
+        \item Conducted multiple trials for mroe reliable results.
+    \end{enumerate}
+\end{enumerate}
+\textbf{What I Would Do Differently:}
+\begin{enumerate}[$\bullet$]
+    \item Use a \textbf{higher sampling rate} for a more accurate derivative calculations.
+    \item Compare \textbf{different differentiation methods} (forward, backward, center difference).
+    \item Experiment with \textbf{various physical activities} to observe distinct jerk and snap trends.
+\end{enumerate}
+
+%---------------------------------------------------------------------------------------- 
+
+\experiment{Final Notes:}
+This lab provided a deeper insight into how motion evolves over time. \textbf{Jerk and snap} are critical in real-world applications such as vehicle safety, robotics, and biomechanics. Future studies could involve \textbf{more advanced filtering techniques} to enhance data quality.
+
+%---------------------------------------------------------------------------------------- 
+
+\newpage
+\experiment{Data Pictures}
+\begin{figure}[H] % Example of including images
+\begin{center}
+\includegraphics[width=1.2\linewidth]{images/Lab.04/Lab04NumericalPractice.png}
+\end{center}
+\caption{Screenshot of Numerical calculations practice using Excel that was provided on Canvas.}
+\label{fig:Lab04-NumericalPractice}
+\end{figure}
+
+\begin{figure}[H] % Example of including images
+\begin{center}
+\includegraphics[width=.70\linewidth]{images/Lab.04/Lab04InClass.PNG}
+\end{center}
+\caption{Screenshot of in-class data when I held phone in the air and placed it on the table. Showed noise in between transitioning from hand to table. Shows the difference in stability.}
+\label{fig:Lab04-InClassDataHandToTable}
+\end{figure}
+
+\begin{figure}[H] % Example of including images
+\begin{center}
+\includegraphics[width=.80\linewidth]{images/Lab.04/Lab04X.jpg}
+\end{center}
+\caption{Screenshot of annotated X graph for pillow fall.}
+\label{fig:Lab04-AnnotatedXGraph}
+\end{figure}
+
+\begin{figure}[H] % Example of including images
+\begin{center}
+\includegraphics[width=.80\linewidth]{images/Lab.04/Lab04Y.jpg}
+\end{center}
+\caption{Screenshot of annotated Y graph for pillow fall.}
+\label{fig:Lab04-AnnotatedYGraph}
+\end{figure}
+
+\begin{figure}[H] % Example of including images
+\begin{center}
+\includegraphics[width=.80\linewidth]{images/Lab.04/Lab04Z.jpg}
+\end{center}
+\caption{Screenshot of annotated Z graph for pillow fall.}
+\label{fig:Lab04-AnnotatedZGraph}
+\end{figure}
+
+%---------------------------------------------------------------------------------------- 
+
 % \begin{tabular}{l l l l l l l l l l l l l}
 % \toprule
 % \textbf{Name} & \textbf{Track 1} & \textbf{Track 2} & \textbf{Track 3} & \textbf{Track 4} & \textbf{Track 5} & \textbf{Track 6} & \textbf{Track 7} & \textbf{Track 8} & \textbf{Track 9} & \textbf{Track 10} & \textbf{Track 11} & \textbf{Track 12}    \\
